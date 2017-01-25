@@ -1,0 +1,6 @@
+spring\SpringImpl\AppTest.class
+spring\SpringImpl\test.class
+com\lonton\annotation\TestAnnotation.class
+com\lonton\bean\AutowiredBean.class
+com\lonton\beans\factory\DefaultListableBeanFactoryTest.class
+com\lonton\bean\BeanA.class

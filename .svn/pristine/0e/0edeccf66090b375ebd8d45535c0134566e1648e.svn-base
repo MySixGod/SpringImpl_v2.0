@@ -1,0 +1,22 @@
+package spring.SpringImpl;
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	
+	public static void main(String[] args) {
+		String[] strs={"aaa","bbb"};
+		System.out.println(tt(strs));
+	}
+
+	public static int tt(String...  strs){
+		
+		int counter = 0;
+		for (String str : strs) {
+			counter += tt(str);
+		}
+		return counter;
+	}
+}
