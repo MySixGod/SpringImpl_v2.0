@@ -14,7 +14,9 @@
 项目使用详细说明</a>
 
 版本历史：
-    目前是版本1.0，还只实现了默认的DefaultListableBeanFactory，后续的话会添加更多容器实现
+    版本1.0，还只实现了默认的DefaultListableBeanFactory，后续的话会添加更多容器实现
+    
+    版本1.1：新增增加AutowireApplicationContext容器，添加@Component注解，实现自动注入功能
 
 
 
