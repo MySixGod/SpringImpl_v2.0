@@ -4,9 +4,7 @@ import com.lonton.ioc.annotation.Autowired;
 
 public class AutowiredBean {
 	
-
 	private BeanA ab;
-	
 	
 	public String say(){
 	  return ab.toString();
@@ -30,6 +28,4 @@ public class AutowiredBean {
 	public void setBeana(BeanA ab) {
 		this.ab = ab;
 	}
-	
-	
 }

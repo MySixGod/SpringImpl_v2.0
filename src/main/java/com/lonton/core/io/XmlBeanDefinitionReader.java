@@ -55,7 +55,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
     }
     
     //講Object轉換成Spring當中的beandefinition
-    private BeanDefinition getbeanBeanDefinitionFromObject(String BeanName,Object object){
+    protected BeanDefinition getbeanBeanDefinitionFromObject(String BeanName,Object object){
     	//本來應該在生成beandefinition的時候，也就是XmlParser方法解析時生成對應的Beandefinition
     	//(只需要我將我想生成的beandefinition類型告訴xmlparser)
     	//TODO這裡我是有默認的beandefiition實現

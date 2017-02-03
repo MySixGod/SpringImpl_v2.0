@@ -2,7 +2,10 @@ package com.lonton.beans.factory;
 
 import com.lonton.exception.BeansException;
 import com.lonton.exception.NoSuchBeanDefinitionException;
-
+/*
+ * @author chenwentao
+ * @since  2017-01-25
+ */
 public abstract class AbstractBeanFactory implements BeanFactory {
 
 	@Override

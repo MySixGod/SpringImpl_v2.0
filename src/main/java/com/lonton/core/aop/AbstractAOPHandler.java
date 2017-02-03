@@ -4,7 +4,8 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /*
- * 
+ * @author chenwentao
+ * @since  2017-01-25
  */
 public abstract class AbstractAOPHandler implements InvocationHandler{
 	

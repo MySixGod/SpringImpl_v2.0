@@ -6,7 +6,5 @@ import com.lonton.core.io.DefaultResourceLoader;
 public abstract class AbstractApplicationContext extends DefaultResourceLoader
 implements ApplicationContext,AutowireCapableBeanFactory{
 	
-	
-	
 
 }

@@ -6,13 +6,12 @@ import com.lonton.beans.factory.BeanFactory;
 import com.lonton.ioc.annotation.Autowired;
 
 /*
- * @author
+ * @author chenwentao
+ * @since  2017-01-25
  */
 public class AutowiredHandle {
 	/*
 	 * @param AutowiredClasss:注解的类类型
-	 * 
-	 * @return 返回beanName
 	 * 
 	 * @BeanName 带有@Autowired注解的类的名字
 	 */

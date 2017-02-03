@@ -14,19 +14,20 @@ public class DefaultListableBeanFactoryTest {
 
 	private static Logger log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
 	DefaultListableBeanFactory defaultListableBeanFactory;
-	@Test
-	@Before
-	public void testDefaultListableBeanFactoryResource(){
+	static{
 		PropertyConfigurator.configure("log4j.properties");
+	}
+	
+	@Test
+	public void testDefaultListableBeanFactoryResource(){
 		//注入一个resource
-		FileSystemResource fsr=new FileSystemResource("E:\\公司文档\\test.xml");
+		FileSystemResource fsr=new FileSystemResource("src\\resource\\test.xml");
 		try {
 			 defaultListableBeanFactory=
 					new DefaultListableBeanFactory(fsr);
 			BeanA a=(BeanA)defaultListableBeanFactory.getBean("beana");
-			log.debug(a.toString());
+			log.info(a.toString());
 		} catch (Exception e) {
-			
 			e.printStackTrace();
 		}
 	}
@@ -35,7 +36,7 @@ public class DefaultListableBeanFactoryTest {
 	public void testDefaultListableBeanFactoryString() {
 		try {
 			 defaultListableBeanFactory=
-					new DefaultListableBeanFactory("E:\\公司文档\\test.xml");
+					new DefaultListableBeanFactory("src\\resource\\test.xml");
 			BeanA a=(BeanA)defaultListableBeanFactory.getBean("beana");
 			log.debug(a.toString());
 		} catch (Exception e) {
@@ -43,10 +44,11 @@ public class DefaultListableBeanFactoryTest {
 		}	
 	}
 
-	
 	@Test
-	public void testRemoveBeanDefinition() {
-		
+	public void testRemoveBeanDefinition() throws Exception{
+		defaultListableBeanFactory.removeBeanDefinition("beana");
+		BeanA a = defaultListableBeanFactory.getBean("beana",BeanA.class);
+		log.info("Bean已经被移除："+(a==null));
 	}
 	
 	@Test
@@ -56,11 +58,7 @@ public class DefaultListableBeanFactoryTest {
 			BeanA a=defaultListableBeanFactory.getBean("beana",BeanA.class);
 			log.debug(a.toString());
 		} catch (BeansException e) {
-			// 
 			e.printStackTrace();
 		}
 	}
-	
-	
-
 }

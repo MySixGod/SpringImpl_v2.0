@@ -21,7 +21,7 @@ public class TestAnnotation {
 		log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
 		PropertyConfigurator.configure("log4j.properties");
 		//注入一个resource
-		FileSystemResource fsr=new FileSystemResource("E:\\公司文档\\test.xml");
+		FileSystemResource fsr=new FileSystemResource("src\\resource\\test.xml");
 		try {
 			 defaultListableBeanFactory=
 					new DefaultListableBeanFactory(fsr);
@@ -40,7 +40,6 @@ public class TestAnnotation {
 		//类BeanA的对象我们已经放入了ioc容器，进行注入
 		AutowiredHandle.AutowiredHandleMethod(AutowiredBean.class,defaultListableBeanFactory,
 				"autowiredbean");
-		
 	    AutowiredBean ab=(AutowiredBean)a;
 		log.info(ab.say());
 	}

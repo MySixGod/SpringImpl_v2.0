@@ -1,39 +1,71 @@
 package com.lonton.context;
 
-import com.lonton.anntotion.handle.ComponentHandle;
+import java.util.Map.Entry;
+
+import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.lonton.anntotion.handle.AutowiredHandle;
+import com.lonton.beans.config.BeanDefinition;
 import com.lonton.beans.factory.AutowireCapableBeanFactory;
 import com.lonton.beans.factory.DefaultListableBeanFactory;
+import com.lonton.beans.factory.support.BeanDefinitionRegistry;
+import com.lonton.core.io.AnnotationBeanDefinitionReader;
 import com.lonton.core.io.Resource;
 
 /*
- * @author
- * 暂时只给AutowireApplicationContext增加自动注入的功能
+ * @author chenwentao
+ * @since  2017-01-25
+ * 给AutowireApplicationContext增加自动注入的功能
  */
 public class AutowireApplicationContext extends DefaultListableBeanFactory implements
 AutowireCapableBeanFactory{
 
+	private static Logger log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
+	static{
+		PropertyConfigurator.configure("log4j.properties");
+	}
+	
 	public AutowireApplicationContext(Resource resource) throws Exception
 	{
 		super(resource);
-		
+		refresh();
 	}
 
 	public AutowireApplicationContext(String location) throws Exception
 	{
 		super(location);
+		refresh();
 	}
 	
 	/*
 	 * 继承ComponentHandle，拥有解析@component注解的能力
 	 */
-	private class ResolveAnnotation extends ComponentHandle{
-		//给定一个包名数组，将自动解析包下所有带有@Component注解的类
-		public void ResolvePackage(String... PackageName){
-			for(String name:PackageName){
-				
-			}
+	private class AutowireAnnotationBeanDefinition extends AnnotationBeanDefinitionReader{
+		public AutowireAnnotationBeanDefinition(BeanDefinitionRegistry registry)
+		{
+			super(registry);
 		}
-	
 	}
-	
+	@Override
+	protected void refresh() throws Exception {
+		int count=new AutowireAnnotationBeanDefinition(this).doLoadBeanDefinitions(resource);
+		AutowireBean();
+		log.info("一共初始化了:"+count+"个bean");
+	}
+
+	@Override
+	public void AutowireBean() {
+		//遍历所有的Bean
+		for(Entry<String, BeanDefinition> bean:beanDefinitionMap.entrySet()){
+			String BeanName=bean.getKey();
+		    Class<?> BeanClass=bean.getValue().getObject().getClass();
+			try {
+				AutowiredHandle.AutowiredHandleMethod(BeanClass, this, BeanName);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}	
+	}
 }

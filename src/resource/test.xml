@@ -1,0 +1,12 @@
+<beans>
+    <bean id="beana"  class="com.lonton.bean.BeanA">
+    	<property name="name" ref="cwt" value="cwt" ></property>
+    </bean>
+    <bean id="autowiredbean" class="com.lonton.bean.AutowiredBean"></bean> 
+    <bean id="aspectbeana" class="com.lonton.core.aop.AspectJBeanA"></bean> 
+    <bean id="DefaultProxyObject" class="com.lonton.core.aop.DefaultProxyObject"></bean>
+    
+    <!-- 将会自动扫描该包下所有注解的bean -->
+    <package-scan packagename="com.lonton.bean"></package-scan>
+    
+</beans>

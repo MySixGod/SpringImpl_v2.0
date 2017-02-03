@@ -1,7 +1,10 @@
 package com.lonton.beans.config;
 
 import com.lonton.enums.ConfigurableBeanFactory;
-
+/*
+ * @author chenwentao
+ * @since  2017-01-25
+ */
 public interface BeanDefinition {
 	
 	String SCOPE_SINGLETON =ConfigurableBeanFactory.SCOPE_SINGLETON.getBeanScope();

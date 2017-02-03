@@ -16,6 +16,9 @@ import com.lonton.exception.BeansException;
 import com.lonton.exception.NoSuchBeanDefinitionException;
 
 /*
+ * @author chenwentao
+ * @since  2017-01-25
+ * 
  * 1.一個基本的容器實現,我這裡簡單實現，直接繼承AbstractBeanFactory
  * 这个工厂和XmlBeanDefinitionReader是联系在一起的，当调用XmlBeanDefinitionReader类
  * 中的loadBeanDefinitions()方法时，会调用registerBeanDefinition()方法，讲beandefinition
@@ -29,7 +32,7 @@ implements BeanDefinitionRegistry,ResourceLoaderBeanFactory{
 	
 	private static Logger log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
 	protected  Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>(256);
-	private Resource resource;
+	protected Resource resource;
 	static{
 		PropertyConfigurator.configure("log4j.properties");
 	}
@@ -87,11 +90,11 @@ implements BeanDefinitionRegistry,ResourceLoaderBeanFactory{
 	}
 	
 	//好了，最后给定一个初始化方法
-	private void refresh() throws Exception{
+	protected void refresh() throws Exception{
 		//在这里，我们完成容器的初始化
 		//1.资源我们已经在构造方法中获取
 		//2.资源的解析
-		int count=new ResourceReaderBeanFactory(this).doLoadBeanDefinitions(resource);
+		int count=new ResourceReaderBeanFactory(this).loadBeanDefinitions(resource);
 		//3.容器的注册方法会被自动调用，此时注册就完成了
 		log.info("一共初始化了"+count+"个bean");
 	}
