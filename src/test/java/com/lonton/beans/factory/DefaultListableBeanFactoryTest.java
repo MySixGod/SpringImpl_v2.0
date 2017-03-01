@@ -18,10 +18,10 @@ public class DefaultListableBeanFactoryTest {
 		PropertyConfigurator.configure("log4j.properties");
 	}
 	
-	@Test
+	@Before
 	public void testDefaultListableBeanFactoryResource(){
 		//注入一个resource
-		FileSystemResource fsr=new FileSystemResource("src\\resource\\test.xml");
+        FileSystemResource fsr = new FileSystemResource("src\\resource\\test.xml");
 		try {
 			 defaultListableBeanFactory=
 					new DefaultListableBeanFactory(fsr);
@@ -56,7 +56,7 @@ public class DefaultListableBeanFactoryTest {
 	public void testGetBean() {
 		try {
 			BeanA a=defaultListableBeanFactory.getBean("beana",BeanA.class);
-			log.debug(a.toString());
+			log.info(a.toString());
 		} catch (BeansException e) {
 			e.printStackTrace();
 		}

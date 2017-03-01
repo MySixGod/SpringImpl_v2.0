@@ -1,12 +1,12 @@
 package com.lonton.beans.config;
 
 /*
- * @author chenwentao
+ * @author cwt
  * @since  2017-01-25
  */
 public abstract class AbstractBeanDefinition implements BeanDefinition{
 	
-	private final String SCOPE_DEFAULT="";
+	private final String SCOPE_DEFAULT="single";
 	private String scope = SCOPE_DEFAULT;
 	/*
 	 * (non-Javadoc)
@@ -22,7 +22,6 @@ public abstract class AbstractBeanDefinition implements BeanDefinition{
 	public String getScope() {
 		return this.scope;
 	}
-
 
 	@Override
 	public boolean isSingleton() {
