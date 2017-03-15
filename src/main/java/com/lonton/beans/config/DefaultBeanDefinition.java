@@ -46,4 +46,5 @@ public class DefaultBeanDefinition extends AbstractBeanDefinition{
 	public void setObject(Object object) {
 		this.object = object;
 	}
+
 }

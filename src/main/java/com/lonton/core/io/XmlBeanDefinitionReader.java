@@ -60,6 +60,5 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader{
     	//(只需要我將我想生成的beandefinition類型告訴xmlparser)
     	//TODO這裡我是有默認的beandefiition實現
         return new DefaultBeanDefinition(BeanName,object);
-   
     }   
 }

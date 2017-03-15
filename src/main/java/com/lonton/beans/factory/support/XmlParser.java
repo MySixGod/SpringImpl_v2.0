@@ -51,7 +51,8 @@ public class XmlParser{
 					beanObj=(String)beanObj;
 				}
 				if(beanObj==null && str==null){
-					throw new XmlConfigurationErrorException("At XmlParser");
+				    //上个版本，如果bean创建顺序不对，则无法初始化bean
+					throw new XmlConfigurationErrorException("At XmlParser,");
 				}
 				//System.out.println(beanObj.toString());
 				// 然后调用构造方法

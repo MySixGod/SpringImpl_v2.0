@@ -64,7 +64,7 @@ AutowireCapableBeanFactory{
 			try {
 				AutowiredHandle.AutowiredHandleMethod(BeanClass, this, BeanName);
 			} catch (Exception e) {
-				e.printStackTrace();
+				log.error("自动注入异常");
 			}
 		}	
 	}
