@@ -55,12 +55,14 @@ AutowireCapableBeanFactory{
 		log.info("一共初始化了:"+count+"个bean");
 	}
 
+	//在这里将带有@autowired注解的方法注入属性值
 	@Override
 	public void AutowireBean() {
 		//遍历所有的Bean
 		for(Entry<String, BeanDefinition> bean:beanDefinitionMap.entrySet()){
 			String BeanName=bean.getKey();
-		    Class<?> BeanClass=bean.getValue().getObject().getClass();
+			//ERROR
+		    Class<?> BeanClass=bean.getValue().getBeanClass();
 			try {
 				AutowiredHandle.AutowiredHandleMethod(BeanClass, this, BeanName);
 			} catch (Exception e) {

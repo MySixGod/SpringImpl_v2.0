@@ -25,10 +25,8 @@ public class DefaultListableBeanFactoryTest {
 		try {
 			 defaultListableBeanFactory=
 					new DefaultListableBeanFactory(fsr);
-			BeanA a=(BeanA)defaultListableBeanFactory.getBean("beana");
-			log.info(a.toString());
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("defaultListableBeanFactory异常");
 		}
 	}
 
@@ -38,7 +36,7 @@ public class DefaultListableBeanFactoryTest {
 			 defaultListableBeanFactory=
 					new DefaultListableBeanFactory("src\\resource\\test.xml");
 			BeanA a=(BeanA)defaultListableBeanFactory.getBean("beana");
-			log.debug(a.toString());
+			log.info(a.getPeople().getFood().say());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	
@@ -58,7 +56,7 @@ public class DefaultListableBeanFactoryTest {
 			BeanA a=defaultListableBeanFactory.getBean("beana",BeanA.class);
 			log.info(a.toString());
 		} catch (BeansException e) {
-			e.printStackTrace();
+			log.error("BeansException");
 		}
 	}
 }

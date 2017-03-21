@@ -2,7 +2,6 @@ package com.lonton.core.io;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 
 import com.lonton.anntotion.handle.ComponentHandle;
@@ -15,6 +14,8 @@ import com.lonton.tools.PackageUtil;
  * @since  2017-02-03
  * @description  直接继承XmlBeanDefinitionReader类实现，不仅能读取xml配置，
  * 还能自动将注解类注入IOC容器
+ * 
+ * 它从注解中获取beanDefinition
  */
 public class AnnotationBeanDefinitionReader extends XmlBeanDefinitionReader{
 
@@ -49,14 +50,14 @@ public class AnnotationBeanDefinitionReader extends XmlBeanDefinitionReader{
 					cls.add(Class.forName(ClassName));
 				}
 			}
-			Map<String, Object> beans=ComponentHandle.getBeanMap(cls);
-			for(Entry<String, Object> bean:beans.entrySet()){
-		        	BeanDefinition BeforeRegisterBean=getbeanBeanDefinitionFromObject(bean.getKey(), bean.getValue());
+			beanDefinitions.putAll(ComponentHandle.getBeanDefinitionMap(cls));
+			//这是我们从注解中获取了bean的定义
+			for(Entry<String, BeanDefinition> beanDefinition:beanDefinitions.entrySet()){
 		        	//講這個bean進行註冊,這是一個藉口方法，當某個容器需要註冊功能的時候，在繼承這個類
 		        	//實現註冊的方法
-		        	registry.registerBeanDefinition(bean.getKey(), BeforeRegisterBean);
+		        	registry.registerBeanDefinition(beanDefinition.getKey(), beanDefinition.getValue());
 		    }  
-			count=count+beans.size();
+			count=count+beanDefinitions.size();
 		}
 		return count;
 	}

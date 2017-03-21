@@ -1,6 +1,7 @@
 package com.lonton.beans.factory;
+
 /*
- * @author  chen  wentao
+ * @author  cwt
  */
 public interface FactoryBean<T> {
 	/*
@@ -8,4 +9,15 @@ public interface FactoryBean<T> {
 	 */
 	boolean  isSingleton();
 	
+	/**
+     * Return an instance (possibly shared or independent) of the object
+     * managed by this factory.
+     */
+    T getObject() throws Exception;
+
+    /**
+     * Return the type of object that this FactoryBean creates,
+     * or {@code null} if not known in advance.
+     * */
+    Class<?> getObjectType();	
 }

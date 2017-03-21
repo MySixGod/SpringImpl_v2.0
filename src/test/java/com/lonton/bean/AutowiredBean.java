@@ -3,7 +3,7 @@ package com.lonton.bean;
 import com.lonton.ioc.annotation.Autowired;
 
 public class AutowiredBean {
-	
+    	
 	private BeanA ab;
 	
 	public String say(){

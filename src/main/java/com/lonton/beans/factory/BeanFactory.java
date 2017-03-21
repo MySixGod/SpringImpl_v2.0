@@ -1,5 +1,6 @@
 package com.lonton.beans.factory;
 
+import com.lonton.beans.config.BeanDefinition;
 import com.lonton.exception.BeansException;
 import com.lonton.exception.NoSuchBeanDefinitionException;
 /*
@@ -13,8 +14,9 @@ public interface BeanFactory {
 	 
 	 <T> T getBean(String name,Class <T> requiredType) throws BeansException;
 	 
-	 boolean containsBean(String name);
+	 boolean containsBeanDefintion(String beanDefinitionName);
 	 
-	 boolean isSingleton(String name) throws NoSuchBeanDefinitionException;
+	 boolean isSingleton(String beanDefinitionName) throws NoSuchBeanDefinitionException;
 	 
+	 BeanDefinition getBeanDefinition(String beanDefinitionName);
 }

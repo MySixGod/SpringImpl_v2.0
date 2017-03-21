@@ -1,5 +1,7 @@
 package com.lonton.beans.factory;
 
+import java.lang.reflect.Method;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -12,8 +14,6 @@ import com.lonton.beans.factory.support.BeanDefinitionRegistry;
 import com.lonton.core.io.FileSystemResource;
 import com.lonton.core.io.Resource;
 import com.lonton.core.io.XmlBeanDefinitionReader;
-import com.lonton.exception.BeansException;
-import com.lonton.exception.NoSuchBeanDefinitionException;
 
 /*
  * @author chenwentao
@@ -98,48 +98,45 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
     }
 
     @Override
-    public Object getBean(String name) {
-        //
-        Object object = beanDefinitionMap.get(name).getObject();
-        if (object == null) {
-            try {
-                throw new NoSuchBeanDefinitionException("");
-            } catch (NoSuchBeanDefinitionException e) {
-                log.error("找不到匹配的bean");
-            }
-        }
-        return object;
-    }
-
-    /*
-     * (non-Javadoc)
-     * @see com.lonton.beans.factory.AbstractBeanFactory#getBean(java.lang.String, java.lang.Class)
-     */
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> T getBean(String name, Class<T> requiredType) throws BeansException {
-        Object object = null;
+    protected Object createBean(String beanNmae, BeanDefinition beanDefinition) {
+        // 如何通过beanDefinition获得一个完整的bean实例（我们已经获取了bean的依赖集合）
+        // 当createBean的时候，它所依赖的bean一定已经创建完成了，并且已经放入了完成池
+        // 反射获取方法，进行bean的注入
+        List<String> depends = beanDefinition.getDepends();
+        Class<?> cl = beanDefinition.getBeanClass();
+        Object bean=null;
         try {
-            object = getBean(name);
-        } catch (Exception e) {
-            log.error("无法获取bean");
-        }
-        // 加入类型判断，如不符合，抛出异常
-        if (requiredType.isInstance(object)) {
-            return (T) object;
+            bean = cl.newInstance();
+        } catch (Exception e1) {
+            log.error("反射异常");
+        } 
+        if (depends != null && depends.size() >= 1) {
+            for (String depend : depends) {
+                String methodName = "set" + depend.substring(0, 1).toUpperCase() + depend.substring(1);
+                // 获取bean的class对象
+                // 通过反射获取方法
+                try {
+                    Method method = cl.getMethod(methodName, completedBeanPool.get(depend).getClass());
+                    // 调用set方法完成注入
+                    method.invoke(bean, completedBeanPool.get(depend));
+                } catch (NoSuchMethodException e) {
+                    log.error("需要获取得bean中没有" + methodName + "方法");
+                } catch (Exception e) {
+                    log.error("反射异常");
+                }
+            }
+            //bean依赖注入完毕
+            return bean;
         } else {
-            log.error("bean类型不匹配");
-            throw new BeansException();
+            // 如果是一个没有依赖的bean
+            return bean;
         }
     }
 
-    /*
-     * (non-Javadoc)
-     * @see com.lonton.beans.factory.AbstractBeanFactory#isSingleton(java.lang.String)
-     */
+    // 通过name获取beanDefinition
     @Override
-    public boolean isSingleton(String name) throws NoSuchBeanDefinitionException {
-        // TODO
-        return super.isSingleton(name);
+    public BeanDefinition getBeanDefinition(String beanDefinitionName) {
+        return beanDefinitionMap.get(beanDefinitionName);
     }
+
 }

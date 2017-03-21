@@ -6,7 +6,7 @@ public class XmlConfigurationErrorException extends ConfigurationErrorException 
 	
 	public XmlConfigurationErrorException(String str)
 	{
-		
+		super(str);
 	}
 
 }
