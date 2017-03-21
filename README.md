@@ -17,9 +17,10 @@
     版本1.0，还只实现了默认的DefaultListableBeanFactory，后续的话会添加更多容器实现
     
     版本1.1：新增增加AutowireApplicationContext容器，添加@Component注解，实现自动注入功能
-
-
-
+    
+    版本2.0：已经实现xml下bean依赖顺序的问题（无论xmlbean定义的顺序如何，DefaultListableBeanFactory的getbean方法总能得到完整的bean），
+            接下来我会解决注解注入中bean依赖顺序的问题以及如何处理出现bean循环依赖的问题，2.0版本还不完整，还存在许多小问题，也暂时取消了基本属性的注             入（只能注入bean），接下的版本我会一一完善
+          
 联系方式：
     邮箱：woshi6ye@gmail.com
     qq：1491758730
@@ -28,3 +29,4 @@
     
     注：目前还未能解决bean加载顺序以及循环依赖的问题，所以相互依赖的bean只能将被依赖的bean放在bean.xml文件的前面。如有循环依赖，则会出现
     NoSuchBeanDefinitionException异常或bean不完整的情况。
+
