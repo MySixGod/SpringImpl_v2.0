@@ -1,11 +1,22 @@
 package com.lonton.bean;
 
+import com.lonton.classForTest.Food;
 import com.lonton.classForTest.People;
 
 public class BeanA implements jiekou {
     
     private People people;
     
+    private Food food;
+    
+    public Food getFood() {
+        return food;
+    }
+
+    public void setFood(Food food) {
+        this.food = food;
+    }
+
     public People getPeople() {
         return people;
     }

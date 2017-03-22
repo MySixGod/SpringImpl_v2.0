@@ -14,12 +14,13 @@ import com.lonton.beans.factory.support.BeanDefinitionRegistry;
 import com.lonton.core.io.FileSystemResource;
 import com.lonton.core.io.Resource;
 import com.lonton.core.io.XmlBeanDefinitionReader;
+import com.lonton.exception.CircularDependException;
 
 /*
  * @author chenwentao
  * @since  2017-01-25
  * 
- * 1.一個基本的容器實現,我這裡簡單實現，直接繼承AbstractBeanFactory
+ * 1.一個基本的容器实现,我這裡簡單實現，直接繼承AbstractBeanFactory
  * 这个工厂和XmlBeanDefinitionReader是联系在一起的，当调用XmlBeanDefinitionReader类
  * 中的loadBeanDefinitions()方法时，会调用registerBeanDefinition()方法，讲beandefinition
  * 注入到DefaultListableBeanFactory，后面我在拓展工厂的时候，只需要继承DefaultListableBeanFactory
@@ -98,7 +99,7 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
     }
 
     @Override
-    protected Object createBean(String beanNmae, BeanDefinition beanDefinition) {
+    protected Object createBean(String beanNmae, BeanDefinition beanDefinition) throws CircularDependException{
         // 如何通过beanDefinition获得一个完整的bean实例（我们已经获取了bean的依赖集合）
         // 当createBean的时候，它所依赖的bean一定已经创建完成了，并且已经放入了完成池
         // 反射获取方法，进行bean的注入
@@ -106,12 +107,19 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
         Class<?> cl = beanDefinition.getBeanClass();
         Object bean=null;
         try {
+            //通过反射生成bean的实例
             bean = cl.newInstance();
         } catch (Exception e1) {
             log.error("反射异常");
         } 
         if (depends != null && depends.size() >= 1) {
+            //此时的bean还不完整，还没有注入它的依赖，我们将它放入新生池
+            babyBeanPool.put(beanNmae, bean);
             for (String depend : depends) {
+                if(babyBeanPool.get(depend)!=null){
+                    log.error("beanDefinition中存在循环依赖");
+                    throw new CircularDependException();
+                }
                 String methodName = "set" + depend.substring(0, 1).toUpperCase() + depend.substring(1);
                 // 获取bean的class对象
                 // 通过反射获取方法
@@ -125,7 +133,6 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
                     log.error("反射异常");
                 }
             }
-            //bean依赖注入完毕
             return bean;
         } else {
             // 如果是一个没有依赖的bean
@@ -137,6 +144,11 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
     @Override
     public BeanDefinition getBeanDefinition(String beanDefinitionName) {
         return beanDefinitionMap.get(beanDefinitionName);
+    }
+
+    @Override
+    public boolean containsBeanDefintion(String beanDefinitionName) {
+        return beanDefinitionMap.get(beanDefinitionName)!=null;
     }
 
 }

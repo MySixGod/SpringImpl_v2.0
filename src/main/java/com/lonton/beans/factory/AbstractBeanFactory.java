@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import com.lonton.beans.config.BeanDefinition;
 import com.lonton.beans.factory.support.DefaultSingletonBeanRegistry;
 import com.lonton.exception.BeansException;
+import com.lonton.exception.CircularDependException;
 import com.lonton.exception.NoSuchBeanDefinitionException;
 
 /*
@@ -38,7 +39,9 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
 
     // 获得bean的实例
     @SuppressWarnings("unchecked")
-    protected <T> T doGetBean(String name, Class<T> requiredType) {
+    protected <T> T doGetBean(String name, Class<T> requiredType) throws BeansException {
+        // 将当前需要创建的bean放入新生池
+        babyBeanPool.put(name, requiredType);
         Object bean;
         // 首先我们急切的去单例池里面去找,如果单例池里面有
         if ((bean = getSingleton(name)) != null) {
@@ -71,32 +74,29 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
                         continue;
                     } else {
                         // 存在该bean依赖的beanDefinition，我们必须先创建它所依赖的bean
-                        try {
-                            getBean(depend);
-                        } catch (Exception e) {
-                            logger.error("无法获取:" + name + "的依赖bean！");
+                        // 在这里，如果发现需要的依赖bean并没有创建完毕
+                        if (babyBeanPool.get(depend) != null) {
+                            logger.error("beanDefinition存在循环依赖，请检查您配置文件！");
+                            throw new CircularDependException();
                         }
+                        getBean(depend);
                     }
                 }
             }
             // 此时bean已经创建完毕
             bean = createBean(name, beanDefinition);
-            // 放入完成池
-            completedBeanPool.put(name, bean);
+            // 放入完成池,并将它移除新生池
+            addToCompletedBeanPoolAndRemoveFromBabyBeanPool(name, bean);
         }
         return (T) bean;
     }
 
-    @Override
-    public boolean containsBeanDefintion(String beanDefinitionName) {
-        try {
-            if (getBean(beanDefinitionName) != null) {
-                return true;
-            }
-        } catch (BeansException e) {
-            e.printStackTrace();
+    // 将创建完成的bean放入完成池,并将它移除新生池
+    private synchronized void addToCompletedBeanPoolAndRemoveFromBabyBeanPool(String name, Object bean) {
+        if (completedBeanPool.get(name) == null) {
+            completedBeanPool.put(name, bean);
         }
-        return false;
+        babyBeanPool.remove(name);
     }
 
     @Override
@@ -112,6 +112,6 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
      * Create a bean instance for the given merged(混合的，模糊的) bean definition (and arguments)
      * 我这里不再需要给出参数值，基本类型的属性会在xmlparse解析的时候进行注入， 我这里的createBean 只处理bean之间的依赖关系
      */
-    protected abstract Object createBean(String BeanName, BeanDefinition beanDefinition);
+    protected abstract Object createBean(String BeanName, BeanDefinition beanDefinition) throws CircularDependException;
 
 }
