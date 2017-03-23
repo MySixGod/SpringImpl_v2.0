@@ -95,28 +95,28 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
         // 2.资源的解析
         int count = new ResourceReaderBeanFactory(this).loadBeanDefinitions(resource);
         // 3.容器的注册方法会被自动调用，此时注册就完成了
-        log.info("一共初始化了" + count + "个bean");
+        log.info("一共初注册了" + count + "个beanDefinition");
     }
 
     @Override
-    protected Object createBean(String beanNmae, BeanDefinition beanDefinition) throws CircularDependException{
+    protected Object createBean(String beanNmae, BeanDefinition beanDefinition) throws CircularDependException {
         // 如何通过beanDefinition获得一个完整的bean实例（我们已经获取了bean的依赖集合）
         // 当createBean的时候，它所依赖的bean一定已经创建完成了，并且已经放入了完成池
         // 反射获取方法，进行bean的注入
         List<String> depends = beanDefinition.getDepends();
         Class<?> cl = beanDefinition.getBeanClass();
-        Object bean=null;
+        Object bean = null;
         try {
-            //通过反射生成bean的实例
+            // 通过反射生成bean的实例
             bean = cl.newInstance();
         } catch (Exception e1) {
             log.error("反射异常");
-        } 
+        }
         if (depends != null && depends.size() >= 1) {
-            //此时的bean还不完整，还没有注入它的依赖，我们将它放入新生池
+            // 此时的bean还不完整，还没有注入它的依赖，我们将它放入新生池
             babyBeanPool.put(beanNmae, bean);
             for (String depend : depends) {
-                if(babyBeanPool.get(depend)!=null){
+                if (babyBeanPool.get(depend) != null) {
                     log.error("beanDefinition中存在循环依赖");
                     throw new CircularDependException();
                 }
@@ -130,7 +130,7 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
                 } catch (NoSuchMethodException e) {
                     log.error("需要获取得bean中没有" + methodName + "方法");
                 } catch (Exception e) {
-                    log.error("反射异常");
+                    log.error("获取到了set方法，没有能获取到需要注入的bean！");
                 }
             }
             return bean;
@@ -148,7 +148,7 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory
 
     @Override
     public boolean containsBeanDefintion(String beanDefinitionName) {
-        return beanDefinitionMap.get(beanDefinitionName)!=null;
+        return beanDefinitionMap.get(beanDefinitionName) != null;
     }
 
 }

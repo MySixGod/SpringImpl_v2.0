@@ -34,7 +34,7 @@ public class DefaultListableBeanFactoryTest {
     public void testDefaultListableBeanFactoryString() {
         try {
             BeanA a = (BeanA) defaultListableBeanFactory.getBean("beana");
-            log.info("the  same  food?   "+(a.getFood()==a.getPeople().getFood()));
+            log.info("the  same  food?   " + (a.getFood() == a.getPeople().getFood()));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -50,11 +50,11 @@ public class DefaultListableBeanFactoryTest {
     @Test
     // TODO
     public void testGetBean() {
-            People people;
-            try {
-                people = defaultListableBeanFactory.getBean("people", People.class);
-                log.info(people.food());
-            } catch (BeansException e) {
-            }
+        People people;
+        try {
+            people = defaultListableBeanFactory.getBean("people", People.class);
+            log.info(people.getFood().say());
+        } catch (BeansException e) {
+        }
     }
 }

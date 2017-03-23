@@ -1,13 +1,9 @@
 package com.lonton.context;
 
-import java.util.Map.Entry;
-
 import org.apache.log4j.PropertyConfigurator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.lonton.anntotion.handle.AutowiredHandle;
-import com.lonton.beans.config.BeanDefinition;
 import com.lonton.beans.factory.AutowireCapableBeanFactory;
 import com.lonton.beans.factory.DefaultListableBeanFactory;
 import com.lonton.beans.factory.support.BeanDefinitionRegistry;
@@ -22,7 +18,7 @@ import com.lonton.core.io.Resource;
 public class AutowireApplicationContext extends DefaultListableBeanFactory implements
 AutowireCapableBeanFactory{
 
-	private static Logger log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
+	private static Logger log = LoggerFactory.getLogger(AutowireApplicationContext.class);
 	static{
 		PropertyConfigurator.configure("log4j.properties");
 	}
@@ -50,24 +46,12 @@ AutowireCapableBeanFactory{
 	}
 	@Override
 	protected void refresh() throws Exception {
-		int count=new AutowireAnnotationBeanDefinition(this).doLoadBeanDefinitions(resource);
-		AutowireBean();
-		log.info("一共初始化了:"+count+"个bean");
+		int count=new AutowireAnnotationBeanDefinition(this).loadBeanDefinitions(resource);
+		log.info("一共初注册了:"+count+"个beanDefinition");
 	}
 
-	//在这里将带有@autowired注解的方法注入属性值
-	@Override
-	public void AutowireBean() {
-		//遍历所有的Bean
-		for(Entry<String, BeanDefinition> bean:beanDefinitionMap.entrySet()){
-			String BeanName=bean.getKey();
-			//ERROR
-		    Class<?> BeanClass=bean.getValue().getBeanClass();
-			try {
-				AutowiredHandle.AutowiredHandleMethod(BeanClass, this, BeanName);
-			} catch (Exception e) {
-				log.error("自动注入异常");
-			}
-		}	
-	}
+    @Override
+    public void AutowireBean() {
+        
+    }
 }

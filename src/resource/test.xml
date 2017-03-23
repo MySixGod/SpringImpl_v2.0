@@ -1,3 +1,7 @@
+
+<!-- 当xml和注解中的bean配置出现重复的时候，默认选择使用xml中的bean配置，也就是说注解中的配置
+无效 -->
+
 <beans>
     <bean id="beana"  class="com.lonton.bean.BeanA">
     <!-- ref应用注入bean -->
@@ -5,7 +9,6 @@
     	<property name="name" ref="food" ></property>
     </bean>
     
-    <bean id="autowiredbean" class="com.lonton.bean.AutowiredBean"></bean> 
     <bean id="aspectbeana" class="com.lonton.core.aop.AspectJBeanA"></bean> 
     <bean id="DefaultProxyObject" class="com.lonton.core.aop.DefaultProxyObject"></bean>
     
@@ -14,7 +17,6 @@
      </bean>
      
      <bean id="food" class="com.lonton.classForTest.Food">
-        <!-- <property name="name" ref="people" ></property> -->
      </bean> 
      
     <!-- 将会自动扫描该包下所有注解的bean -->

@@ -152,3 +152,182 @@
 2017-03-22 15:45:47  [ main:5 ] - [ INFO ]  the  same  food?   true
 2017-03-22 15:47:41  [ main:0 ] - [ INFO ]  一共初始化了6个bean
 2017-03-22 15:47:41  [ main:4 ] - [ INFO ]  人要吃饭
+2017-03-22 15:58:21  [ main:1 ] - [ INFO ]  一共初始化了6个bean
+2017-03-22 15:58:21  [ main:4 ] - [ INFO ]  the  same  food?   true
+2017-03-22 15:58:40  [ main:0 ] - [ INFO ]  一共初始化了6个bean
+2017-03-22 15:58:40  [ main:4 ] - [ INFO ]  人要吃饭
+2017-03-22 15:58:53  [ main:0 ] - [ INFO ]  一共初始化了6个bean
+2017-03-22 15:58:53  [ main:5 ] - [ INFO ]  人要吃饭
+2017-03-22 16:03:37  [ main:0 ] - [ INFO ]  一共初始化了6个bean
+2017-03-22 16:03:37  [ main:3 ] - [ ERROR ]  beanDefinition存在循环依赖，请检查您配置文件！
+2017-03-22 16:03:37  [ main:3 ] - [ ERROR ]  beanDefinition存在循环依赖，请检查您配置文件！
+2017-03-22 16:03:53  [ main:0 ] - [ INFO ]  一共初始化了6个bean
+2017-03-22 16:03:53  [ main:4 ] - [ INFO ]  人要吃饭
+2017-03-22 16:08:04  [ main:0 ] - [ INFO ]  一共初始化了6个bean
+2017-03-22 16:08:04  [ main:3 ] - [ ERROR ]  beanDefinition:people 存在循环依赖，请检查您配置文件！
+2017-03-22 16:08:04  [ main:3 ] - [ ERROR ]  beanDefinition:people 存在循环依赖，请检查您配置文件！
+2017-03-22 16:08:18  [ main:0 ] - [ INFO ]  一共初始化了6个bean
+2017-03-22 16:08:18  [ main:3 ] - [ ERROR ]  beanDefinition:beana 存在循环依赖，请检查您配置文件！
+2017-03-22 16:08:18  [ main:3 ] - [ ERROR ]  beanDefinition:beana 存在循环依赖，请检查您配置文件！
+2017-03-23 09:17:03  [ main:0 ] - [ INFO ]  一共初注册了:6个beanDefinition
+2017-03-23 09:17:03  [ main:19 ] - [ INFO ]  一共初注册了:6个beanDefinition
+2017-03-23 09:17:03  [ main:44 ] - [ ERROR ]  bean不存在
+2017-03-23 09:17:03  [ main:44 ] - [ ERROR ]  bean不存在
+2017-03-23 09:17:03  [ main:67 ] - [ ERROR ]  bean不存在
+2017-03-23 09:17:03  [ main:67 ] - [ ERROR ]  bean不存在
+2017-03-23 09:21:13  [ main:0 ] - [ INFO ]  一共初注册了:6个beanDefinition
+2017-03-23 09:21:13  [ main:11 ] - [ INFO ]  一共初注册了:6个beanDefinition
+2017-03-23 09:21:13  [ main:12 ] - [ ERROR ]  bean不存在
+2017-03-23 09:21:13  [ main:12 ] - [ ERROR ]  bean不存在
+2017-03-23 09:21:13  [ main:14 ] - [ ERROR ]  bean不存在
+2017-03-23 09:21:13  [ main:14 ] - [ ERROR ]  bean不存在
+2017-03-23 09:32:40  [ main:0 ] - [ INFO ]  一共初注册了:6个beanDefinition
+2017-03-23 09:32:40  [ main:9 ] - [ INFO ]  一共初注册了:6个beanDefinition
+2017-03-23 09:32:40  [ main:10 ] - [ ERROR ]  bean不存在
+2017-03-23 09:32:40  [ main:10 ] - [ ERROR ]  bean不存在
+2017-03-23 09:32:40  [ main:11 ] - [ ERROR ]  bean不存在
+2017-03-23 09:32:40  [ main:11 ] - [ ERROR ]  bean不存在
+2017-03-23 09:41:53  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 09:41:53  [ main:13 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 09:41:53  [ main:14 ] - [ ERROR ]  bean不存在
+2017-03-23 09:41:53  [ main:14 ] - [ ERROR ]  bean不存在
+2017-03-23 09:41:53  [ main:14 ] - [ ERROR ]  bean不存在
+2017-03-23 09:41:53  [ main:14 ] - [ ERROR ]  bean不存在
+2017-03-23 09:42:35  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 09:42:35  [ main:15 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 09:42:35  [ main:16 ] - [ INFO ]  注解注入测试成功
+2017-03-23 09:45:56  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 09:45:56  [ main:26 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 09:45:56  [ main:27 ] - [ INFO ]  注解注入测试成功
+2017-03-23 09:54:59  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 09:54:59  [ main:13 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 09:54:59  [ main:14 ] - [ INFO ]  注解注入测试成功
+2017-03-23 09:57:14  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 09:57:14  [ main:11 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 09:57:14  [ main:12 ] - [ INFO ]  注解注入测试成功
+2017-03-23 09:58:29  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 09:58:29  [ main:11 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 09:58:29  [ main:12 ] - [ INFO ]  注解注入测试成功
+2017-03-23 09:59:58  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 09:59:58  [ main:14 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 09:59:58  [ main:15 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:01:33  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:01:33  [ main:17 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 10:01:33  [ main:18 ] - [ WARN ]  dependcomponentbeanmay be you will create  a  incomplete bean
+2017-03-23 10:01:33  [ main:18 ] - [ WARN ]  dependcomponentbeanmay be you will create  a  incomplete bean
+2017-03-23 10:01:33  [ main:19 ] - [ ERROR ]  反射异常
+2017-03-23 10:01:33  [ main:19 ] - [ ERROR ]  反射异常
+2017-03-23 10:01:33  [ main:20 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:03:59  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:03:59  [ main:29 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 10:03:59  [ main:30 ] - [ WARN ]  dependcomponentbeanmay be you will create  a  incomplete bean
+2017-03-23 10:03:59  [ main:30 ] - [ WARN ]  dependcomponentbeanmay be you will create  a  incomplete bean
+2017-03-23 10:03:59  [ main:32 ] - [ ERROR ]  反射异常
+2017-03-23 10:03:59  [ main:32 ] - [ ERROR ]  反射异常
+2017-03-23 10:03:59  [ main:33 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:15:54  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:15:54  [ main:16 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 10:15:54  [ main:18 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:16:14  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:16:14  [ main:15 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 10:16:14  [ main:16 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:16:14  [ main:17 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:18:27  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:18:27  [ main:14 ] - [ INFO ]  一共初注册了:12个beanDefinition
+2017-03-23 10:18:27  [ main:15 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:18:27  [ main:16 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:19:00  [ main:0 ] - [ INFO ]  一共初注册了:9个beanDefinition
+2017-03-23 10:19:00  [ main:14 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:19:00  [ main:15 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:19:00  [ main:16 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:20:19  [ main:0 ] - [ INFO ]  一共初注册了:9个beanDefinition
+2017-03-23 10:20:19  [ main:11 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:20:19  [ main:12 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:20:19  [ main:13 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:20:56  [ main:0 ] - [ INFO ]  一共初注册了:9个beanDefinition
+2017-03-23 10:20:56  [ main:13 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:20:56  [ main:14 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:20:56  [ main:14 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:20:56  [ main:17 ] - [ INFO ]  
+2017-03-23 10:21:28  [ main:0 ] - [ INFO ]  一共初注册了:9个beanDefinition
+2017-03-23 10:21:28  [ main:23 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:21:28  [ main:25 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:21:28  [ main:26 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:21:28  [ main:26 ] - [ INFO ]  false
+2017-03-23 10:21:59  [ main:0 ] - [ INFO ]  一共初注册了:9个beanDefinition
+2017-03-23 10:21:59  [ main:12 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:21:59  [ main:13 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:21:59  [ main:14 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:22:57  [ main:0 ] - [ INFO ]  一共初注册了:9个beanDefinition
+2017-03-23 10:22:57  [ main:20 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:22:57  [ main:21 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:22:57  [ main:24 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:22:57  [ main:26 ] - [ INFO ]  动态代理
+2017-03-23 10:25:11  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:25:11  [ main:12 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:25:11  [ main:14 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:25:11  [ main:14 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:25:11  [ main:15 ] - [ INFO ]  动态代理
+2017-03-23 10:25:39  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:25:39  [ main:9 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:25:39  [ main:10 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:25:39  [ main:11 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:25:39  [ main:11 ] - [ INFO ]  BeanA测试成功属性名：null
+2017-03-23 10:25:58  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:25:58  [ main:15 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:25:58  [ main:17 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:25:58  [ main:17 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:26:31  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:26:31  [ main:13 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:26:31  [ main:15 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:26:31  [ main:15 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:26:31  [ main:16 ] - [ INFO ]  
+2017-03-23 10:27:20  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:27:20  [ main:12 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:27:20  [ main:14 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:27:20  [ main:15 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:27:20  [ main:15 ] - [ INFO ]  BeanA测试成功属性名：null
+2017-03-23 10:28:07  [ main:1 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:28:07  [ main:16 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:28:07  [ main:18 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:28:07  [ main:19 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:31:07  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:31:07  [ main:15 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:31:07  [ main:16 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:31:07  [ main:17 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:31:07  [ main:17 ] - [ INFO ]  Object  is  null?false
+2017-03-23 10:31:31  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:31:31  [ main:15 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:31:31  [ main:18 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:31:31  [ main:19 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:31:31  [ main:19 ] - [ INFO ]  Object  is  null?true
+2017-03-23 10:32:23  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:32:23  [ main:13 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:32:23  [ main:15 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:32:23  [ main:15 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:32:23  [ main:16 ] - [ INFO ]  Object  is  null?true
+2017-03-23 10:32:23  [ main:16 ] - [ INFO ]  人要吃饭
+2017-03-23 10:32:39  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:32:39  [ main:14 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:32:39  [ main:16 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:32:39  [ main:16 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:32:39  [ main:17 ] - [ INFO ]  Object  is  null?true
+2017-03-23 10:32:39  [ main:18 ] - [ INFO ]  人要吃饭
+2017-03-23 10:33:34  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:33:34  [ main:13 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:33:34  [ main:15 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:33:34  [ main:16 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:33:34  [ main:16 ] - [ INFO ]  Object  is  null?true
+2017-03-23 10:33:34  [ main:17 ] - [ INFO ]  人要吃饭
+2017-03-23 10:34:20  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:34:20  [ main:12 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:34:20  [ main:14 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:34:20  [ main:15 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:34:20  [ main:15 ] - [ INFO ]  Object  is  null?false
+2017-03-23 10:34:20  [ main:15 ] - [ INFO ]  人要吃饭
+2017-03-23 10:34:32  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-03-23 10:34:32  [ main:16 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-03-23 10:34:32  [ main:17 ] - [ INFO ]  注解注入测试成功
+2017-03-23 10:34:32  [ main:17 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-03-23 10:34:32  [ main:17 ] - [ INFO ]  Object  is  null?false
+2017-03-23 10:34:32  [ main:18 ] - [ INFO ]  人要吃饭

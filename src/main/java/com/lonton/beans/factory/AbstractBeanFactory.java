@@ -19,7 +19,7 @@ import com.lonton.exception.NoSuchBeanDefinitionException;
  */
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(AbstractBeanFactory.class);
 
     // 创建完成bean池，我会将创建已完成的bean放入其中
     protected Map<String, Object> completedBeanPool = new HashMap<>();
@@ -69,14 +69,15 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
                 for (String depend : depends) {
                     // 如果发现该bean的某些依赖不存在
                     if (!containsBeanDefintion(depend)) {
-                        logger.warn(name + "may be you will create  a  incomplete bean");
+                        logger.warn(name + "may be you will create  a  "
+                                + "incomplete bean,依赖的bean:"+depend+"不存在！");
                         // 直接跳过，进入下一次循环
                         continue;
                     } else {
                         // 存在该bean依赖的beanDefinition，我们必须先创建它所依赖的bean
                         // 在这里，如果发现需要的依赖bean并没有创建完毕
                         if (babyBeanPool.get(depend) != null) {
-                            logger.error("beanDefinition存在循环依赖，请检查您配置文件！");
+                            logger.error("beanDefinition中存在循环依赖，请检查您配置文件！");
                             throw new CircularDependException();
                         }
                         getBean(depend);
