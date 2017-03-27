@@ -1,6 +1,5 @@
 package com.lonton.beans.factory.support;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +18,7 @@ import com.lonton.exception.XmlConfigurationErrorException;
  * @author chenwentao
  * @since  2017-01-25
  */
-//解析方法，返回BeanDefinition對象集合
+//解析xml方法:返回BeanDefinition對象集合
 //改写XmlParser，解析xml返回的应该是beandefinition，而不是直接就生成了bean
 //在获取了beandefinition之后，在通过beandefinition创建bean
 
@@ -59,26 +58,22 @@ public class XmlParser {
                 // 进行遍历
                 for (Element e : eles) {
                     // 属性名
+                    @SuppressWarnings("unused")
                     String proName = e.getAttributeValue("name");
                     // bean
                     String beanDepend = e.getAttributeValue("ref");
-                    // 基本类型
-                    String str = e.getAttributeValue("value");
+                    // 需要注入的基本类型值
+                    String value = e.getAttributeValue("value");
                     // 注入基本类型属性
-                    if (beanDepend == null && str != null) {
-                        // 然后调用构造方法
-                        String methodName = "set" + proName.substring(0, 1).toUpperCase() + proName.substring(1);
-                        // 通过反射获取方法(注意：一个参数，也只能获取String基本类型进行注入)
-                        Method method = beanClass.getMethod(methodName, str.getClass());
-                        method.invoke(beanClass.newInstance(), str);
-                        // TODO
+                    if (beanDepend == null && value != null) {
+                        //TODO
                     }
                     // 需要注入bean
-                    if (beanDepend != null && str == null) {
+                    if (beanDepend != null && value == null) {
                         // 在这里我直接让生成的beandefinied持有depends就可以，正真的注入发生在createBean //TODO
                         beanDefinition.addDepend(beanDepend);
                     }
-                    if ((beanDepend == null && str == null) || (beanDepend != null && str != null)) {
+                    if ((beanDepend == null && value == null) || (beanDepend != null && value != null)) {
                         // 上个版本，如果bean创建顺序不对，则无法初始化bean
                         logger.error("请检查property元素配置的正确性，ref和value不能同时为空或者同时有值");
                         throw new XmlConfigurationErrorException("At XmlParser,请删除property元素或添加可用的属性值");

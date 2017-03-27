@@ -2,7 +2,17 @@ package com.lonton.classForTest;
 
 public class Food {
 
+    private String foodName;
+
     People people;
+    
+    public String getFoodName() {
+        return foodName;
+    }
+
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
+    }
 
     public People getPeople() {
         return people;

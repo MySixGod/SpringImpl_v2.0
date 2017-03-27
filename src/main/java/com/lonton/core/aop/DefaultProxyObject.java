@@ -16,7 +16,7 @@ public class DefaultProxyObject extends AbstractProxy{
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	<T> T getProxyObjectByType(Class<?> clz, Aop aop){
+	public <T> T getProxyObjectByType(Class<T> clz, Aop aop){
 		Object obj=null;
 		try {
 			obj= getProxyObject(clz.newInstance(),aop);
