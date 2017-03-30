@@ -2,6 +2,9 @@ package com.lonton.anntotion.handle;
 
 import java.lang.reflect.Method;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.lonton.beans.factory.BeanFactory;
 import com.lonton.ioc.annotation.Autowired;
 
@@ -14,6 +17,8 @@ public class AutowiredHandle {
      * @param AutowiredClasss:注解的类类型
      * @BeanName 带有@Autowired注解的类的名字
      */
+    private static Logger logger = LoggerFactory.getLogger(AutowiredHandle.class);
+
     public static void AutowiredHandleMethod(Class<?> AutowiredClass, BeanFactory beanFactory, String beanName)
             throws Exception {
         // 遍历AutowiredClass的方法
@@ -33,7 +38,7 @@ public class AutowiredHandle {
                 if (method != null) {
                     method.invoke(beanFactory.getBean(beanName), bean);
                 } else {
-                    System.out.println("方法为空！");
+                    logger.error("调用的方法不存在！");
                 }
             }
         }

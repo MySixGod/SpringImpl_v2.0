@@ -21,7 +21,9 @@
               2. 需要注入的属性类型，（填写包装类型）
               3. 需要注入的value
          -->
-         <property name="foodName"  type="java.lang.String"  value="通过xml配置注入基本类型" ></property>
+         <property name="foodName"  type="java.lang.String"  value="西红柿" ></property>
+         <property name="number"  type="java.lang.Integer"  value="100" ></property>
+         
      </bean> 
      
     <!-- 将会自动扫描该包下所有注解的bean -->

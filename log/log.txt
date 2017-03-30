@@ -333,3 +333,163 @@
 2017-03-23 10:34:32  [ main:18 ] - [ INFO ]  人要吃饭
 2017-03-23 14:52:06  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
 2017-03-23 14:52:19  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 10:37:18  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 10:37:18  [ main:5 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:37:18  [ main:5 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:37:18  [ main:11 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean！
+2017-03-30 10:37:18  [ main:11 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean！
+2017-03-30 10:37:18  [ main:12 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:37:18  [ main:12 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:37:18  [ main:12 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean！
+2017-03-30 10:37:18  [ main:12 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean！
+2017-03-30 10:37:18  [ main:13 ] - [ INFO ]  the  same  food?   true
+2017-03-30 10:37:30  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 10:37:30  [ main:7 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:37:30  [ main:7 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:37:30  [ main:8 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean！
+2017-03-30 10:37:30  [ main:8 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean！
+2017-03-30 10:37:30  [ main:10 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:37:30  [ main:10 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:37:30  [ main:11 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean！
+2017-03-30 10:37:30  [ main:11 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean！
+2017-03-30 10:37:30  [ main:12 ] - [ INFO ]  the  same  food?   true
+2017-03-30 10:39:20  [ main:1 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 10:39:20  [ main:12 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:39:20  [ main:12 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:39:20  [ main:15 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean:foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 10:39:20  [ main:15 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean:foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 10:39:20  [ main:16 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:39:20  [ main:16 ] - [ WARN ]  foodmay be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:39:20  [ main:18 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean:foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 10:39:20  [ main:18 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean:foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 10:39:20  [ main:20 ] - [ INFO ]  the  same  food?   true
+2017-03-30 10:42:26  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 10:42:26  [ main:5 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:42:26  [ main:5 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:42:26  [ main:6 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean:foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 10:42:26  [ main:6 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean:foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 10:42:26  [ main:6 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:42:26  [ main:6 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 10:42:26  [ main:7 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean:foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 10:42:26  [ main:7 ] - [ ERROR ]  获取到了set方法，没有能获取到需要注入的bean:foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 10:42:26  [ main:7 ] - [ INFO ]  the  same  food?   true
+2017-03-30 18:42:21  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:42:21  [ main:4 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:.foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 18:42:21  [ main:4 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:.foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 18:42:21  [ main:6 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:.foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 18:42:21  [ main:6 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:.foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 18:42:21  [ main:6 ] - [ INFO ]  the  same  food?   true
+2017-03-30 18:42:58  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:42:58  [ main:4 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:.foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 18:42:58  [ main:4 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:.foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 18:42:58  [ main:7 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:.foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 18:42:58  [ main:7 ] - [ WARN ]  beanName: food     message:may be you will create  a  incomplete bean,依赖的bean:.foodName+java.lang.String+通过xml配置注入基本类型不存在！
+2017-03-30 18:42:58  [ main:7 ] - [ INFO ]  the  same  food?   true
+2017-03-30 18:42:58  [ main:8 ] - [ INFO ]  
+2017-03-30 18:45:02  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:45:02  [ main:4 ] - [ ERROR ]  bean不存在
+2017-03-30 18:45:02  [ main:4 ] - [ ERROR ]  bean不存在
+2017-03-30 18:45:02  [ main:5 ] - [ ERROR ]  beanDefinition中存在循环依赖
+2017-03-30 18:45:02  [ main:5 ] - [ ERROR ]  beanDefinition中存在循环依赖
+2017-03-30 18:47:24  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:47:24  [ main:5 ] - [ ERROR ]  bean不存在:.foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 18:47:24  [ main:5 ] - [ ERROR ]  bean不存在:.foodName+java.lang.String+通过xml配置注入基本类型
+2017-03-30 18:47:24  [ main:6 ] - [ ERROR ]  beanDefinition中存在循环依赖
+2017-03-30 18:47:24  [ main:6 ] - [ ERROR ]  beanDefinition中存在循环依赖
+2017-03-30 18:53:14  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:53:14  [ main:4 ] - [ INFO ]  the  same  food?   true
+2017-03-30 18:53:14  [ main:5 ] - [ INFO ]  
+2017-03-30 18:57:15  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:57:15  [ main:4 ] - [ INFO ]  the  same  food?   true
+2017-03-30 18:57:15  [ main:5 ] - [ ERROR ]  bean不存在:Food
+2017-03-30 18:57:15  [ main:5 ] - [ ERROR ]  bean不存在:Food
+2017-03-30 18:57:28  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:57:28  [ main:5 ] - [ INFO ]  the  same  food?   true
+2017-03-30 18:57:28  [ main:5 ] - [ INFO ]  
+2017-03-30 18:58:32  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:58:32  [ main:5 ] - [ INFO ]  the  same  food?   true
+2017-03-30 18:58:32  [ main:6 ] - [ INFO ]  
+2017-03-30 18:59:20  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:59:20  [ main:4 ] - [ INFO ]  the  same  food?   true
+2017-03-30 18:59:20  [ main:4 ] - [ INFO ]  
+2017-03-30 18:59:47  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 18:59:47  [ main:4 ] - [ INFO ]  the  same  food?   true
+2017-03-30 18:59:47  [ main:4 ] - [ INFO ]  
+2017-03-30 19:00:46  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:00:46  [ main:6 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:00:46  [ main:6 ] - [ INFO ]  
+2017-03-30 19:01:42  [ main:1 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:01:42  [ main:5 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:01:42  [ main:6 ] - [ INFO ]  
+2017-03-30 19:02:02  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:02:02  [ main:5 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:02:02  [ main:6 ] - [ INFO ]  
+2017-03-30 19:02:19  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:02:19  [ main:5 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:02:19  [ main:5 ] - [ INFO ]  
+2017-03-30 19:03:32  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:03:32  [ main:5 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:03:32  [ main:5 ] - [ INFO ]  
+2017-03-30 19:07:31  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:07:31  [ main:7 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:07:31  [ main:8 ] - [ INFO ]  通过xml配置注入基本类型
+2017-03-30 19:08:02  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:08:02  [ main:7 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:08:02  [ main:7 ] - [ INFO ]  通过xml配置注入基本类型
+2017-03-30 19:08:02  [ main:7 ] - [ INFO ]  通过xml配置注入基本类型
+2017-03-30 19:09:32  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:09:32  [ main:5 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:09:32  [ main:5 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:09:32  [ main:6 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:09:32  [ main:6 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:09:32  [ main:6 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:09:32  [ main:6 ] - [ INFO ]  西红柿
+2017-03-30 19:09:32  [ main:7 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:09:32  [ main:7 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:09:32  [ main:7 ] - [ INFO ]  西红柿0
+2017-03-30 19:10:19  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:10:19  [ main:6 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:6 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:7 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:7 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:9 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:9 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:10 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:10 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:12 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:10:19  [ main:12 ] - [ INFO ]  
+2017-03-30 19:10:19  [ main:13 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:13 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:13 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:13 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+2017-03-30 19:10:19  [ main:14 ] - [ INFO ]  null0
+2017-03-30 19:11:27  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:11:27  [ main:6 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配setNumber
+2017-03-30 19:11:27  [ main:6 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配setNumber
+2017-03-30 19:11:27  [ main:7 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配setNumber
+2017-03-30 19:11:27  [ main:7 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配setNumber
+2017-03-30 19:11:27  [ main:8 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:11:27  [ main:8 ] - [ INFO ]  西红柿
+2017-03-30 19:11:27  [ main:9 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配setNumber
+2017-03-30 19:11:27  [ main:9 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配setNumber
+2017-03-30 19:11:27  [ main:10 ] - [ INFO ]  西红柿0
+2017-03-30 19:12:27  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:12:27  [ main:5 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+方法名：setNumber参数：100
+2017-03-30 19:12:27  [ main:5 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+方法名：setNumber参数：100
+2017-03-30 19:12:27  [ main:7 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+方法名：setNumber参数：100
+2017-03-30 19:12:27  [ main:7 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+方法名：setNumber参数：100
+2017-03-30 19:12:27  [ main:7 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:12:27  [ main:8 ] - [ INFO ]  西红柿
+2017-03-30 19:12:27  [ main:8 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+方法名：setNumber参数：100
+2017-03-30 19:12:27  [ main:8 ] - [ ERROR ]  基本类型注入时方法调用错误，可能原因：属性名配置错误，类型不匹配
+方法名：setNumber参数：100
+2017-03-30 19:12:27  [ main:9 ] - [ INFO ]  西红柿0
+2017-03-30 19:13:02  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-03-30 19:13:02  [ main:6 ] - [ INFO ]  the  same  food?   true
+2017-03-30 19:13:02  [ main:6 ] - [ INFO ]  西红柿
+2017-03-30 19:13:02  [ main:7 ] - [ INFO ]  西红柿100

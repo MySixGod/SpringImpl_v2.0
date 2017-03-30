@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import com.lonton.beans.config.BeanDefinition;
 import com.lonton.beans.config.DefaultBeanDefinition;
 import com.lonton.exception.XmlConfigurationErrorException;
+import com.lonton.tools.Assert;
 
 /*
  * @author chenwentao
@@ -40,7 +41,7 @@ public class XmlParser {
             }
             // 获取属性值，即为对象的名字
             String beanDefinitonName = elements.getAttributeValue("id");
-            if(beanDefinitonName==null){
+            if (beanDefinitonName == null) {
                 continue;
             }
             // 在获取类的路径，在通过java反射获取类的类类型，在获取该类的对象
@@ -58,15 +59,25 @@ public class XmlParser {
                 // 进行遍历
                 for (Element e : eles) {
                     // 属性名
-                    @SuppressWarnings("unused")
                     String proName = e.getAttributeValue("name");
                     // bean
                     String beanDepend = e.getAttributeValue("ref");
                     // 需要注入的基本类型值
                     String value = e.getAttributeValue("value");
+                    // 需要注入的基本类型的类型
+                    String type = e.getAttributeValue("type");
                     // 注入基本类型属性
                     if (beanDepend == null && value != null) {
-                        //TODO
+                        // TODO 先验证是否为空或者等于空串
+                        if (Assert.isEffectiveString(proName) && Assert.isEffectiveString(type)) {
+                            //思路：生成一个基本类型的bean，将其注入到bean容器(虽然可以实现，但是为每一个类的基本
+                            //属性都需要生成一个bean，显然不合理)
+                            //所以这样实现，如果是依赖于基本类型，那我给他一个特殊的依赖  name+type+value                    
+                            beanDefinition.addDepend("."+proName+"+"+type+"+"+value);
+                            //特殊的depend添加完成，我们将在DefaultListableBeanFactory的doCreateBean
+                            //方法中进行处理
+                        }
+
                     }
                     // 需要注入bean
                     if (beanDepend != null && value == null) {
