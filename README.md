@@ -25,6 +25,7 @@
             <br>
             #项目类图：
             BeanDefinition:
+            <img url="https://github.com/MySixGod/SpringImpl_v2.0/tree/property/target/ModelGoonImage/BeanDefinition.png"/>
             ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/tree/property/target/ModelGoonImage/BeanDefinition.png)
             
           
