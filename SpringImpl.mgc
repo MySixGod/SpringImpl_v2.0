@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class
+        name="com.lonton.beans.factory.DefaultListableBeanFactory.ResourceReaderBeanFactory"
+        x="494" y="22">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.lonton.beans.config.BeanDefinition" x="46" y="29">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class
+        name="com.lonton.beans.factory.support.BeanDefinitionRegistry"
+        x="717" y="400">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.lonton.beans.factory.DefaultListableBeanFactory"
+        x="258" y="418">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.lonton.beans.factory.AbstractBeanFactory"/>
+        <Extension destinationClassName="com.lonton.beans.factory.ListableBeanFactory"/>
+        <Extension destinationClassName="com.lonton.beans.factory.support.BeanDefinitionRegistry"/>
+        <Extension destinationClassName="com.lonton.beans.factory.ResourceLoaderBeanFactory"/>
+        <Association
+            destinationClassName="com.lonton.beans.config.BeanDefinition"
+            endpointName="beanDefinitionMap" kind="Simple"/>
+        <Communication destinationClassName="com.lonton.beans.config.BeanDefinition"/>
+    </Class>
+    <Class name="com.lonton.beans.factory.support.SingletonBeanRegistry"
+        x="801" y="-66">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.lonton.context.ApplicationContext" x="86" y="337">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.lonton.beans.factory.support.XmlParser" x="-90" y="125">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.lonton.beans.config.BeanDefinition"
+            endpointName="beanDefinitions" kind="Simple"/>
+        <Communication destinationClassName="com.lonton.beans.config.BeanDefinition"/>
+    </Class>
+    <Class name="com.lonton.beans.factory.ResourceLoaderBeanFactory"
+        x="679" y="283">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.lonton.context.AbstractApplicationContext" x="26" y="431">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.lonton.context.ApplicationContext"/>
+        <Extension destinationClassName="com.lonton.beans.factory.AutowireCapableBeanFactory"/>
+    </Class>
+    <Class name="com.lonton.context.AutowireApplicationContext" x="562" y="538">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.lonton.beans.factory.DefaultListableBeanFactory"/>
+        <Extension destinationClassName="com.lonton.beans.factory.AutowireCapableBeanFactory"/>
+    </Class>
+    <Class name="com.lonton.beans.factory.AbstractBeanFactory" x="617" y="130">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.lonton.beans.factory.BeanFactory"/>
+        <Extension destinationClassName="com.lonton.beans.factory.support.DefaultSingletonBeanRegistry"/>
+        <Communication destinationClassName="com.lonton.beans.config.BeanDefinition"/>
+        <Communication destinationClassName="com.lonton.beans.factory.BeanFactory"/>
+        <Communication destinationClassName="com.lonton.beans.factory.support.DefaultSingletonBeanRegistry"/>
+    </Class>
+    <Class name="com.lonton.beans.config.DefaultBeanDefinition" x="-95" y="332">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.lonton.beans.config.AbstractBeanDefinition"/>
+    </Class>
+    <Class name="com.lonton.beans.factory.ListableBeanFactory" x="281" y="142">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.lonton.beans.factory.BeanFactory"/>
+    </Class>
+    <Class name="com.lonton.beans.config.AbstractBeanDefinition" x="-38" y="211">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.lonton.beans.config.BeanDefinition"/>
+    </Class>
+    <Class name="com.lonton.beans.factory.AutowireCapableBeanFactory"
+        x="418" y="207">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.lonton.beans.factory.BeanFactory"/>
+    </Class>
+    <Class name="com.lonton.beans.factory.BeanFactory" x="277" y="13">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class
+        name="com.lonton.beans.factory.support.DefaultSingletonBeanRegistry"
+        x="734" y="6">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.lonton.beans.factory.support.SingletonBeanRegistry"/>
+    </Class>
+</ClassDiagram>

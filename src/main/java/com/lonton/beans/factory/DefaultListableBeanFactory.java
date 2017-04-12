@@ -32,7 +32,7 @@ import com.lonton.exception.XmlConfigurationErrorException;
  * 
  */
 public class DefaultListableBeanFactory extends AbstractBeanFactory
-        implements BeanDefinitionRegistry, ResourceLoaderBeanFactory {
+        implements BeanDefinitionRegistry, ResourceLoaderBeanFactory ,ListableBeanFactory{
 
     private static Logger log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
     protected Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>(256);

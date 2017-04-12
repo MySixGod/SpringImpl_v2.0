@@ -1,5 +1,0 @@
-package com.lonton.exception;
-
-public class NoSuchBeanDefinitionException extends BeansException {
-
-}
