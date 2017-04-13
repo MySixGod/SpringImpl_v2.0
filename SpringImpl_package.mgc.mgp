@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="com.lonton.beans.config" x="247" y="159">
+        <DependencyLink destination="com.lonton.enums"/>
+    </Package>
+    <Package name="com.lonton.beans.factory.support" x="608" y="252">
+        <DependencyLink destination="com.lonton.tools"/>
+        <DependencyLink destination="com.lonton.beans.config"/>
+        <DependencyLink destination="com.lonton.exception"/>
+    </Package>
+    <Package name="com.lonton.context" x="157" y="450">
+        <DependencyLink destination="com.lonton.core.io"/>
+        <DependencyLink destination="com.lonton.beans.factory.support"/>
+        <DependencyLink destination="com.lonton.beans.factory"/>
+    </Package>
+    <Package name="com.lonton.core.aop" x="617" y="111"/>
+    <Package name="com.lonton.core.io" x="-25" y="266">
+        <DependencyLink destination="com.lonton.ioc.annotation"/>
+        <DependencyLink destination="com.lonton.tools"/>
+        <DependencyLink destination="com.lonton.beans.factory.support"/>
+        <DependencyLink destination="com.lonton.beans.config"/>
+        <DependencyLink destination="com.lonton.beans.factory"/>
+    </Package>
+    <Package name="com.lonton.beans.factory" x="511" y="439">
+        <DependencyLink destination="com.lonton.core.io"/>
+        <DependencyLink destination="com.lonton.beans.factory.support"/>
+        <DependencyLink destination="com.lonton.beans.config"/>
+        <DependencyLink destination="com.lonton.exception"/>
+        <DependencyLink destination="com.lonton.enums"/>
+    </Package>
+    <Package name="com.lonton.anntotion.handle" x="-89" y="159">
+        <DependencyLink destination="com.lonton.ioc.annotation"/>
+        <DependencyLink destination="com.lonton.beans.config"/>
+        <DependencyLink destination="com.lonton.exception"/>
+        <DependencyLink destination="com.lonton.beans.factory"/>
+    </Package>
+    <Package name="com.lonton.enums" x="16" y="383"/>
+    <Package name="com.lonton.exception" x="465" y="26"/>
+    <Package name="com.lonton.ioc.annotation" x="47" y="48"/>
+    <Package name="com.lonton.tools" x="264" y="27"/>
+</PackageAnalysis>
