@@ -23,6 +23,10 @@
             <br>
             <br>
             <br>
+             #项目类图：
+            BeanDefinition:
+            <img url="https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/BeanDefinition.png"/>
+            ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/BeanDefinition.png)
           
 联系方式：
     邮箱：woshi6ye@gmail.com
