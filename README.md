@@ -26,51 +26,12 @@
     版本2.0：已经实现xml下bean依赖顺序的问题（无论xmlbean定义的顺序如何，DefaultListableBeanFactory的getbean方法总能得到完整的bean），
             接下来我会解决注解注入中bean依赖顺序的问题以及如何处理出现bean循环依赖的问题，2.0版本还不完整，还存在许多小问题，也暂时取消了基本属性               的入（只能注入bean），接下的版本我会一一完善
     
-    版本2.1：已经解决了循环依赖以及bean依赖顺序的问题，妈妈再也不用担心我配错bean的顺序啦！也加入了基本属性的注入，不过必须配置为完整的包装类型，
-       例如： 
-              注入基本的类型的xml配置方法 ,需要配置三个属性:
-              1. field的name，
-              2. 需要注入的属性类型，（填写包装类型）
-              3. 需要注入的value
-              <property name="foodName"  type="java.lang.String"  value="西红柿" ></property>
-         因为我是通过反射来注入基本类型的，另外现在框架通过beandefinition生成对象的实例过程中只通过set方法去设置bean的依赖，所以暂时只能通过单一的
-         set方法进行注入，我会在后续的版本中添加更多的支持，进一步完善！！！
+    版本2.1：已经解决了循环依赖以及bean依赖顺序的问题，妈妈再也不用担心我配错bean的顺序啦！也加入了基本属性的注入，不过必须配置为完整的包装类型                  ,在我的test.xml文件爱你中有详细说明
+      
                        
  ## 项目整体结构图：
- src
- ├── main
- │   └── java
- │       └── com
- │           └── lonton
- │               ├── anntotion  框架注解包，目前实现了@autowired和@component注解
- │               ├── beans     
- │               │   ├── config  这里面放的是beandefinition类
- │               │   └── factory  核心ioc容器实现全在这里啦！最核心的容器DefaultListableBeanFactory，AbstractBeanFactory，重点
- │               ├── context      context容器包，
- │               ├── core
- |               |   ├── aop     aop假装实现了下，其实就是写了下java动态代理，忽略吧
- │               │   └── io      这里面放的是核心的resource包，容器将通过它来获取beandefinition
- │               ├── enums       一些枚举常量包，比如single，prototype等
- │               ├── exception   异常包
- │               ├── ioc         核心容器包
- │               └── tools       一些通用的工具类
- ├── resource
- │   ├── log4j.properties        日志文件
- │   └── test.xml
- └── test                        下面是一些测试用例，写的比较少，好吧，估计还有很多bug
-    └── java
-        ├── com
-        │   └── lonton
-        │       ├── annotation
-        │       ├── bean
-        │       ├── beans
-        │       ├── classForTest
-        │       ├── context
-        │       └── core
-        └── spring
-            └── SpringImpl
-                ├── AppTest.java
-                └── test.java
+       ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/struct.png)
+
 
 
   ##  项目类图：（类的关系有些地方还有待商榷，有不清晰的地方，后续在慢慢改正）
