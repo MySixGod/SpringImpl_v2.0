@@ -13,8 +13,9 @@ import com.lonton.enums.ConfigurableBeanFactory;
  * 的能力
  * 
  * 注：在我模拟spring的过程中，我直接采用beandefinition直接持有java对象的方式实现
- * spring是通过beandefinition来createbean，依赖注入的触发发生在AbstractBeanFactory 的doGetBean方法里面，
- * createBean发生在AbstractAutowireCapableBeanFactory  的doCreateBean里面
+ * spring是通过beandefinition来createbean，依赖注入的触发发生在AbstractBeanFactory 
+ * 的doGetBean方法里面，createBean发生在AbstractAutowireCapableBeanFactory 
+ * 的doCreateBean里面
  */
 public interface BeanDefinition {
 
