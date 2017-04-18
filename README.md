@@ -1,7 +1,6 @@
  ## SpringImpl_v1.0  （请移步prototype分支，propertype分支较为完善，分支因为冲突过多还没有合并，等有时间好好整理下，O(∩_∩)O
 
-
- ###  ps：
+ ## ps：
     看了很多别人写的项目，很多项目都很不错，但是却没有一个详细项目说明（我的一开始也是，好感概啊！）导致你的项目再好，别人的理解成本是很高的；
     来github也有很长的一段时间了，在这里也收获了很多，既然它是一个开源的社区，那么核心自然是分享，我也希望我的这个小demo能友好的分享给大家，我也         会尽量写好项目说明（如果有什么不好的地方给我提建议，我会改正），降低别人学习成本；我也会将写出高质量易读的代码作为我前行的目标！加油↖(^ω^)↗
 
@@ -34,14 +33,14 @@
 
 
 
-  ##  项目类图：（类的关系有些地方还有待商榷，有不清晰的地方，后续在慢慢改正）
-             BeanDefinition:
+  ##   项目类图：（类的关系有些地方还有待商榷，有不清晰的地方，后续在慢慢改正）
+  ###  BeanDefinition:
             ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/BeanDefinition.png)
-             Resource类图：
+  ###  Resource类图：
             ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/IO.png)
-            核心容器类图：
+  ###  核心容器类图：
              ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/BeanFactory.png)
-             异常处理类图（命名以及结构有些随意，后续改进）：
+  ###  异常处理类图（命名以及结构有些随意，后续改进）：
               ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/exception.png)
               
           
