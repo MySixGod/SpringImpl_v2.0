@@ -25,8 +25,14 @@
             <br>
              #项目类图：
             BeanDefinition:
-            <img url="https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/BeanDefinition.png"/>
             ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/BeanDefinition.png)
+            Resource类图：
+            ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/IO.png)
+            核心容器类图：
+             ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/BeanFactory.png)
+             异常处理类图（命名以及结构有些随意，后续改进）：
+              ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/exception.png)
+              
           
 联系方式：
     邮箱：woshi6ye@gmail.com
