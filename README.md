@@ -16,7 +16,7 @@ ps：
 项目简介：
 =====
 
->  一直在学习Spring，这个是模仿SpringIOC的实现原理仿制的一个框架，希望能在不断地构建以及重构这个框架的过程中不断地学习Spring，在这个过程中一窥Spring的精髓，以及我们要如何设计一个可用性高，高拓展的项目，它会教会我们如何去设计一个软件，让我们的思想从代码到软件过程的跃进。 
+>  一直在学习Spring，这个是模仿SpringIOC的实现原理仿制的一个框架，希望能在不断地构建以及重构这个框架的过程中不断地学习Spring，在这个过程中一窥Spring的精髓，以及我们要如何设计一个可用性高，高拓展的项目，它会教会我们如何去设计一个软件，让我们的思想从代码到软件工程的跃进。 
 > 
 > 我也会在今后不断的学习中更新这     >个项目，将自己的理解注入我的IOC容器。当然，基于题主才疏学浅，固然框架有很多不好的地方，如有朋友能提供一些指导和建议，不胜感激。
 
@@ -75,22 +75,22 @@ ps：
    ###  BeanDefinition:
             ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/BeanDefinition.png)
    ###  Resource类图：
-   
-            ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/IO.png)
+  ![https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/IO.png][2]
    ###  核心容器类图：
              ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/BeanFactory.png)
    ###  异常处理类图（命名以及结构有些随意，后续改进）：
               ![Image text]( https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/exception.png)
               
           
- ## 联系方式：
  
-    邮箱：woshi6ye@gmail.com
-    qq：1491758730
-    使用的过程中如果有任何问题或者建议的话，可以联系我，我会及时给予解答
-    如果觉得还不错，或者是给我一些鼓励的话，请给一颗小星星作为鼓励哦，我也会把这个框架做的越来越好
-    
-   
 
+联系方式：
+=====
 
+> 邮箱：woshi6ye@gmail.com
+> qq：1491758730
+> 使用的过程中如果有任何问题或者建议的话，可以联系我，我会及时给予解答如果觉得还不错，或者是给我一些鼓励的话，请给一颗小星星作为鼓励哦，我也会把这个框架做的越来越好！
+
+ 
   [1]: https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/struct.png
+  [2]: https://github.com/MySixGod/SpringImpl_v2.0/blob/property/ModelGoonImage/IO.png
