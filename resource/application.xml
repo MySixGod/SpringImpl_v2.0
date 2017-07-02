@@ -1,12 +1,11 @@
 
 <!-- 当xml和注解中的bean配置出现重复的时候，默认选择使用xml中的bean配置，也就是说注解中的配置
 无效 -->
-
 <beans>
     <bean id="beana"  class="com.lonton.bean.BeanA">
     <!-- ref应用注入bean -->
-    	<property name="name" ref="people" ></property>
-    	<property name="name" ref="food" ></property>
+    	<property ref="people" ></property>
+    	<property  ref="food" ></property>
     </bean>
     
     <bean id="aspectbeana" class="com.lonton.core.aop.AspectJBeanA"></bean> 
@@ -17,6 +16,14 @@
      </bean>
      
      <bean id="food" class="com.lonton.classForTest.Food">
+         <!-- 注入基本的类型的xml配置方法 ,需要配置三个属性:
+              1. field的name，
+              2. 需要注入的属性类型，（填写包装类型）
+              3. 需要注入的value
+         -->
+         <property name="foodName"  type="java.lang.String"  value="西红柿" ></property>
+         <property name="number"  type="java.lang.Integer"  value="100" ></property>
+         
      </bean> 
      
     <!-- 将会自动扫描该包下所有注解的bean -->

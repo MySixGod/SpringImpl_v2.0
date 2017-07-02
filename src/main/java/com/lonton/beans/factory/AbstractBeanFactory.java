@@ -57,7 +57,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
                 try {
                     throw new NoSuchBeanDefinitionException("");
                 } catch (NoSuchBeanDefinitionException e1) {
-                    logger.error("bean不存在");
+                    logger.error("bean不存在:"+name);
                     return null;
                 }
             /*
@@ -67,9 +67,13 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
             // 如果当前创建的bean是依赖于其他bean的
             if (depends != null && depends.size() >= 1) {
                 for (String depend : depends) {
+                    //如果依赖的是基本类型，则不需要先进行创建
+                    if(depend.indexOf('.')==0){
+                        continue;
+                    }
                     // 如果发现该bean的某些依赖不存在
                     if (!containsBeanDefintion(depend)) {
-                        logger.warn(name + "may be you will create  a  "
+                        logger.warn("beanName: "+name + "     message:may be you will create  a  "
                                 + "incomplete bean,依赖的bean:"+depend+"不存在！");
                         // 直接跳过，进入下一次循环
                         continue;

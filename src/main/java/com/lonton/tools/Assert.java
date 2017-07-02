@@ -12,4 +12,7 @@ public class Assert {
         return "Object  is  null?" + (object == null ? true : false);
     }
 
+    public static boolean isEffectiveString(String value) {
+        return value != null && !value.equals("");
+    }
 }

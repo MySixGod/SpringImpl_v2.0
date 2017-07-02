@@ -11,6 +11,7 @@ import com.lonton.beans.factory.support.XmlParser;
 
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
+    //暂时保存beanDefinition，稍后在doLoadBeanDefinitions方法中注册到beanFactory
     protected Map<String, BeanDefinition> beanDefinitions = new HashMap<>();
 
     // 默認使用DefaultBeanDefinition

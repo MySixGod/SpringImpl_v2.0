@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.lonton.bean.BeanA;
+import com.lonton.classForTest.Food;
 import com.lonton.classForTest.People;
 import com.lonton.core.io.FileSystemResource;
 import com.lonton.exception.BeansException;
@@ -35,6 +36,9 @@ public class DefaultListableBeanFactoryTest {
         try {
             BeanA a = (BeanA) defaultListableBeanFactory.getBean("beana");
             log.info("the  same  food?   " + (a.getFood() == a.getPeople().getFood()));
+            log.info(a.getFood().getFoodName());
+            Food f=(Food)defaultListableBeanFactory.getBean("food");
+            log.info(f.getFoodName()+f.getNumber());
         } catch (Exception e) {
             e.printStackTrace();
         }
