@@ -21,12 +21,12 @@ public class TestAnnotation {
 		log = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
 		PropertyConfigurator.configure("log4j.properties");
 		//注入一个resource
-		FileSystemResource fsr=new FileSystemResource("src\\resource\\test.xml");
+		FileSystemResource fsr=new FileSystemResource("resource/application.xml");
 		try {
 			 defaultListableBeanFactory=
 					new DefaultListableBeanFactory(fsr);
 			BeanA a=(BeanA)defaultListableBeanFactory.getBean("beana");
-			log.debug(a.toString());
+			log.debug(a.toString()+"");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	

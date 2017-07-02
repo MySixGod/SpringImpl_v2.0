@@ -331,3 +331,30 @@
 2017-03-23 10:34:32  [ main:17 ] - [ INFO ]  DependComponentBean：注解注入测试成功
 2017-03-23 10:34:32  [ main:17 ] - [ INFO ]  Object  is  null?false
 2017-03-23 10:34:32  [ main:18 ] - [ INFO ]  人要吃饭
+2017-07-02 11:59:37  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-07-02 11:59:37  [ main:8 ] - [ ERROR ]  bean不存在
+2017-07-02 11:59:37  [ main:8 ] - [ ERROR ]  bean不存在
+2017-07-02 12:00:28  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-07-02 12:00:28  [ main:6 ] - [ ERROR ]  bean不存在
+2017-07-02 12:00:28  [ main:6 ] - [ ERROR ]  bean不存在
+2017-07-02 12:02:02  [ main:1 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-07-02 12:02:02  [ main:6 ] - [ ERROR ]  bean不存在
+2017-07-02 12:02:02  [ main:6 ] - [ ERROR ]  bean不存在
+2017-07-02 12:02:56  [ main:0 ] - [ ERROR ]  defaultListableBeanFactory异常
+2017-07-02 12:02:56  [ main:0 ] - [ ERROR ]  defaultListableBeanFactory异常
+2017-07-02 12:04:40  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-07-02 12:04:40  [ main:7 ] - [ INFO ]  the  same  food?   true
+2017-07-02 21:39:37  [ main:0 ] - [ INFO ]  一共初注册了:8个beanDefinition
+2017-07-02 21:39:37  [ main:15 ] - [ INFO ]  一共初注册了:14个beanDefinition
+2017-07-02 21:39:37  [ main:17 ] - [ INFO ]  注解注入测试成功
+2017-07-02 21:39:37  [ main:18 ] - [ INFO ]  DependComponentBean：注解注入测试成功
+2017-07-02 21:39:37  [ main:18 ] - [ INFO ]  Object  is  null?false
+2017-07-02 21:39:37  [ main:19 ] - [ INFO ]  人要吃饭
+2017-07-02 21:40:34  [ main:0 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-07-02 21:40:34  [ main:5 ] - [ INFO ]  人要吃饭
+2017-07-02 21:40:34  [ main:12 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-07-02 21:40:34  [ main:14 ] - [ INFO ]  the  same  food?   true
+2017-07-02 21:40:34  [ main:28 ] - [ INFO ]  一共初注册了5个beanDefinition
+2017-07-02 21:40:34  [ main:29 ] - [ ERROR ]  bean不存在
+2017-07-02 21:40:34  [ main:29 ] - [ ERROR ]  bean不存在
+2017-07-02 21:40:34  [ main:30 ] - [ INFO ]  beanDefinition已经被移除：true

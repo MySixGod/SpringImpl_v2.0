@@ -22,7 +22,7 @@ public class DefaultListableBeanFactoryTest {
     @Before
     public void testDefaultListableBeanFactoryResource() {
         // 注入一个resource
-        FileSystemResource fsr = new FileSystemResource("src\\resource\\test.xml");
+        FileSystemResource fsr = new FileSystemResource("resource/application.xml");
         try {
             defaultListableBeanFactory = new DefaultListableBeanFactory(fsr);
         } catch (Exception e) {

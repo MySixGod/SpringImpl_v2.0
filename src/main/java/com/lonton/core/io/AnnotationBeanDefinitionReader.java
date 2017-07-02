@@ -11,7 +11,6 @@ import com.lonton.ioc.annotation.Autowired;
 import com.lonton.ioc.annotation.Component;
 import com.lonton.tools.Assert;
 import com.lonton.tools.PackageUtil;
-
 /*
  * @author cwt
  * @since  2017-02-03

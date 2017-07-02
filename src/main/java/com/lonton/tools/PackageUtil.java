@@ -12,7 +12,7 @@ public class PackageUtil {
 
 	public static List<String> getClassName(String packageName) {
 		
-		String filePath ="src\\test\\java\\"+packageName.replace(".", "\\");
+		String filePath ="test\\java\\"+packageName.replace(".", "\\");
 		List<String> fileNames = getClassName(filePath, null);
 		return fileNames;	
 	}
@@ -34,7 +34,7 @@ public class PackageUtil {
 						childFilePath.lastIndexOf("."));
 				childFilePath = childFilePath.replace("\\", ".");
 				childFilePath=childFilePath.substring(6,childFilePath.length());
-				myClassName.add(childFilePath);
+				myClassName.add("com."+childFilePath);
 			}
 		}
 		return myClassName;
